@@ -12,6 +12,7 @@ namespace Encapsulation
         private string lastName;
         private int age;
 
+
         //Constructor for the person class
         public Person(string firstName, string lastName, int age){
             this.firstName = firstName;
@@ -23,15 +24,7 @@ namespace Encapsulation
         {
             get 
             { 
-                return firstName; 
-            }
-
-            private set
-            {
-                if (string.IsNullOrWhiteSpace(value))
-                {
-                    throw new ArgumentException("First name should not be empty or only whitespace.");
-                }
+                return this.firstName; 
             }
         }
 
@@ -39,24 +32,18 @@ namespace Encapsulation
         {
             get
             {
-                return lastName;
+                return this.lastName;
             }
-            set
-            {
-                throw new ArgumentException("Last name should not be empty or only whitespace.");
-            }
+            
         }
 
         public int Age
         {
             get
             {
-                return age;
+                return this.age;
             }
-            set
-            {
-                throw new ArgumentException("Age should not be empty or only whitespace.");
-            }
+            
         }
 
         public override string ToString()
